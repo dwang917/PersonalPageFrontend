@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 className="text-3xl font-bold text-center">Welcome!</h1>
+        <p className="mt-4 text-gray-700 text-center">
+          This is my personal webpage built with React and Tailwind CSS.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p className="mt-4 text-gray-700 text-center">
+          This site is hosted on AWS EC2. More updates will be added soon.
+        </p>
+      </div>
     </div>
   );
 }
