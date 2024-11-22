@@ -1,16 +1,24 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import MainContent from "./components/MainContent"; 
+import Contact from "./pages/Contact"; 
+
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-        <h1 className="text-3xl font-bold text-center">Welcome!</h1>
-        <p className="mt-4 text-gray-700 text-center">
-          This is my personal webpage built with React and Tailwind CSS.
-        </p>
-        <p className="mt-4 text-gray-700 text-center">
-          This site is hosted on AWS EC2. More updates will be added soon.
-        </p>
+    <Router>
+      <div className="min-h-screen bg-gray-100 text-gray-900 font-mono">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<MainContent />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-    </div>
+    </Router>
   );
 }
 
