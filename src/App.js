@@ -14,9 +14,13 @@ function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={
-              <div className="px-8 min-h-[70vh] flex items-center justify-center">
-                <div className="w-full max-w-3xl">
-                  <MainContent />
+              <div className="px-8">
+                <div className="max-w-5xl mx-auto">
+                  <div className="min-h-[55vh] sm:min-h-[58vh] md:min-h-[60vh] lg:min-h-[62vh] flex items-center justify-center pt-6 sm:pt-8 md:pt-12">
+                    <div className="w-full max-w-3xl">
+                      <MainContent />
+                    </div>
+                  </div>
                 </div>
               </div>
             } />
