@@ -1,24 +1,41 @@
+import { Link } from "react-router-dom";
+
 function MainContent() {
-    return (
-      <main className="p-8 max-w-4xl mx-auto">
-        <section className="mt-8">
-          <h2 className="text-3xl font-bold">Welcome!</h2>
-          <p className="text-lg leading-7 mt-8">
-            My name is Daming. I'm a software engineer intern at Thorlabs working with Embedded Rust for device firmware and software.
-          </p>
-          {/* <p className="text-lg mt-6 leading-7">
-            Currently, I'm learning about Clound and deployment tools. With that said, this site is hosted on AWS EC2, and I plan to incorporate more cloud services in the future. At the meantime, feel free to check out my <a href="https://github.com/dwang917" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Github</a> page and connect with me on <a href="https://www.linkedin.com/in/daming-wang-0a9a8b1bb/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
-          </p> */}
-          <p className="mt-6 text-lg leading-7">
-            In my free time, I enjoy learning new technologies, sharpening my programming skills and trying out new tools. I also love to explore the outdoors, whether it's hiking, climbing, or just enjoying nature.
-          </p>
-          <p className="mt-6 text-lg leading-7">
-            More updates coming soon.
-          </p>
-        </section>
-      </main>
-    );
-  }
-  
-  export default MainContent;
-  
+  return (
+  <div>
+  <section className="flex flex-col items-center gap-4 text-center max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">Hi, I’m Daming.</h2>
+        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+          Software engineer focused on embedded systems, Rust, and clean, reliable products.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-2.5">
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-1.5 rounded-md bg-gray-900 text-white px-3 py-1.5 shadow hover:bg-gray-800 transition"
+          >
+            Learn more
+            <span aria-hidden>→</span>
+          </Link>
+          <a
+            href="https://github.com/dwang917"
+            className="inline-flex items-center gap-1.5 rounded-md border border-gray-300 px-3 py-1.5 hover:bg-gray-50 transition"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/daming-wang-0a9a8b1bb/"
+            className="inline-flex items-center gap-1.5 rounded-md border border-gray-300 px-3 py-1.5 hover:bg-gray-50 transition"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default MainContent;

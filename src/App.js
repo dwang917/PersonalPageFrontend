@@ -2,18 +2,34 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import MainContent from "./components/MainContent"; 
-import Contact from "./pages/Contact"; 
+import MainContent from "./components/MainContent";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100 text-gray-900 font-mono">
+      <div className="min-h-screen flex flex-col bg-white text-gray-900 font-sans">
         <Header />
-        <main>
+        <main className="flex-1">
           <Routes>
-            <Route path="/" element={<MainContent />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={
+              <div className="px-8 min-h-[70vh] flex items-center justify-center">
+                <div className="w-full max-w-3xl">
+                  <MainContent />
+                </div>
+              </div>
+            } />
+            <Route path="/about" element={
+              <div className="max-w-5xl mx-auto px-8">
+                <About />
+              </div>
+            } />
+            <Route path="/contact" element={
+              <div className="max-w-5xl mx-auto px-8">
+                <Contact />
+              </div>
+            } />
           </Routes>
         </main>
         <Footer />
